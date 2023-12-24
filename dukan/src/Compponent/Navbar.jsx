@@ -5,31 +5,29 @@ import {
 export function Navbar() {
   return (
     <Flex
-      w="100%"
-      h="10vh"
-      p="12px 32px"
+      w="1216px"
+      h="64px"
+      p="12px 32px 12px 32px"
       alignItems="center"
       gap="16px"
       borderBottom="1px solid #D9D9D9"
       bg="#fff"
+     
+     
     >
       <Flex w="360px" alignItems="center" gap="16px" flex="1 0 0">
-        <Box
-          fontSize="20px"
-          fontStyle="normal"
-          fontWeight="500"
-          lineHeight="28px"
-        >
-          Payouts
-        </Box>
 
         <Flex
+        w={"360px"}
+        h={"28px"}
+        display={"flex"}
           alignItems="center"
-          gap="6px"
+          gap="16px"
           fontSize="12px"
           fontStyle="normal"
           fontWeight="400"
           lineHeight="16px"
+         fontFamily= "Galano Grotesque"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +66,12 @@ export function Navbar() {
         </Flex>
       </Flex>
 
-      <Flex>
+      <Flex width="400px"
+      
+      padding={"9px 16px "}
+      gap={"8px"}
+
+>
         <InputGroup>
           <InputLeftElement>
             <svg

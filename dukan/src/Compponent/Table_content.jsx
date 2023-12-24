@@ -20,15 +20,16 @@ export function TableContent() {
 
   return (
     <Flex
-   w={"100%"}
-      p="12px"
+      w={"1152px"}
+      h={"448px"}
+      p="12px 12px 8px 12px"
       flexDirection="column"
       alignItems="flex-end"
       borderRadius="8px"
       bg="#fff"
       boxShadow="0px 2px 6px 0px rgba(26, 24, 30, 0.04)"
     >
-      <Flex flexDirection="column" alignItems="flex-start" gap="12px" w={"100%"}>
+      <Flex flexDirection="column" alignItems="flex-start" gap="12px">
         <Flex
           justifyContent="space-between"
           gap="670px"
@@ -60,7 +61,7 @@ export function TableContent() {
             <Input
               w="248px"
               border="1px solid #d9d9d9"
-              placeholder="Order ID or transaction ID"
+             
               borderRadius="4px"
               type="text"
             />
@@ -141,76 +142,282 @@ export function TableContent() {
           </Flex>
         </Flex>
 
-        <Box w="100%" >
-          <TableContainer >
-            <Table variant="simple" w={"100%"}>
-              <Thead
-                bg="#f2f2f2"
-                fontSize="14px"
-                fontStyle="normal"
-                fontWeight="500"
-                lineHeight="20px"
-              >
-                <Tr>
-                  <Th>Order ID</Th>
-                  <Th>Status</Th>
-                  <Th>Transaction ID</Th>
+        
+        <Flex
+          w={"1128px"}
+          padding={"10px 12px 10px 12px"}
+          alignItems={"center"}
+          gap={"40px"}
+          borderRadius={"4px"}
+          bg={"#F2F2F2"}
+        >
+          <Flex
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-start"}
+            gap={"-1px"}
+            flex={"1 0 0"}
+            w={"150.67px"}
+            h={"20px"}
+          ></Flex>
+          <Flex
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-start"}
+            gap={"-1px"}
+            flex={"1 0 0"}
+            w={"150.67px"}
+            h={"20px"}
+          ></Flex>
+          <Flex
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-start"}
+            gap={"-1px"}
+            flex={"1 0 0"}
+            w={"150.67px"}
+            h={"20px"}
+          >
+            <Text
+              color={"#4D4D4D"}
+              textAlign={"right"}
+              fontFamily={"Galano Grotesque"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"20px"}
+            >
+              Transaction ID
+            </Text>
+          </Flex>
+          <Flex
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-end"}
+            gap={"-1px"}
+            flex={"1 0 0"}
+            w={"150.67px"}
+            h={"20px"}
+          >
+            <Text
+              color={"#4D4D4D"}
+              textAlign={"right"}
+              fontFamily={"Galano Grotesque"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"20px"}
+            >
+              Order amount
+            </Text>
+          </Flex>
+          <Flex
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-end"}
+            gap={"-1px"}
+            flex={"1 0 0"}
+            w={"150.67px"}
+            h={"20px"}
+          >
+            <Text
+              color={"#4D4D4D"}
+              textAlign={"right"}
+              fontFamily={"Galano Grotesque"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"20px"}
+            >
+              Transaction fees
+            </Text>
+          </Flex>
+          <Flex
+            direction={"column"}
+            justifyContent={"center"}
+            alignItems={"flex-end"}
+            gap={"-1px"}
+            flex={"1 0 0"}
+            w={"150.67px"}
+            h={"20px"}
+          >
+            <Text
+              color={"#4D4D4D"}
+              textAlign={"right"}
+              fontFamily={"Galano Grotesque"}
+              fontSize={"14px"}
+              fontStyle={"normal"}
+              fontWeight={"500"}
+              lineHeight={"20px"}
+            >
+              Total
+            </Text>
+          </Flex>
+        </Flex>
+        {arr.map((e, ind) => (
+          <Flex
+            w={"1128px"}
+            padding={"10px 12px 10px 12px"}
+            alignItems={"center"}
+            gap={"40px"}
+            borderRadius={"4px"}
+            bg={"#FFF"}
+          >
+            <Flex
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"flex-start"}
+              gap={"-1px"}
+              flex={"1 0 0"}
+              w={"150.67px"}
+              h={"20px"}
+            ></Flex>
+            <Flex
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"flex-start"}
+              gap={"-1px"}
+              flex={"1 0 0"}
+              w={"150.67px"}
+              h={"20px"}
+            >
+              {ind != 0 && (
+                <Flex alignItems="center" gap="8px">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11"
+                    height="10"
+                    viewBox="0 0 11 10"
+                    fill="none"
+                  >
+                    <circle cx="5.66406" cy="5" r="5" fill="#55ac58" />
+                  </svg>
 
-                  <Th>Order Amount</Th>
-                  <Th>Transaction fees</Th>
-                  <Th>Total</Th>
-                </Tr>
-              </Thead>
-              <Tbody
-                fontSize="14px"
-                fontStyle="normal"
-                fontWeight="400"
-                lineHeight="20px"
-              >
-                {arr.map((ele, ind) => (
-                  <Tr>
-                    <Td>#2812045</Td>
-                    <Td>
-                      {ind != 0 && (
-                        <Flex alignItems="center" gap="5px">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="11"
-                            height="10"
-                            viewBox="0 0 11 10"
-                            fill="none"
-                          >
-                            <circle cx="5.66406" cy="5" r="5" fill="#55ac58" />
-                          </svg>
-                          Successful
-                        </Flex>
-                      )}
-                      {ind == 0 && (
-                        <Flex alignItems="center" gap="5px">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="11"
-                            height="10"
-                            viewBox="0 0 11 10"
-                            fill="none"
-                          >
-                            <circle cx="5.66406" cy="5" r="5" fill="#999999" />
-                          </svg>
-                          Processing
-                        </Flex>
-                      )}
-                    </Td>
-                    <Td>45367265665</Td>
-                    <Td>₹76,457</Td>
+                  <Text
+                    color={"#1A181E"}
+                    textAlign={"right"}
+                    fontFamily={"Galano Grotesque"}
+                    fontSize={"14px"}
+                    fontStyle={"normal"}
+                    fontWeight={"400"}
+                    lineHeight={"20px"}
+                  >
+                    Successful
+                  </Text>
+                </Flex>
+              )}
+              {ind == 0 && (
+                <Flex alignItems="center" gap="8px">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="11"
+                    height="10"
+                    viewBox="0 0 11 10"
+                    fill="none"
+                  >
+                    <circle cx="5.66406" cy="5" r="5" fill="#999999" />
+                  </svg>
 
-                    <Td>₹1,878.00</Td>
-                    <Td>₹678</Td>
-                  </Tr>
-                ))}
-              </Tbody>
-            </Table>
-          </TableContainer>
-        </Box>
+                  <Text
+                    color={"#1A181E"}
+                    textAlign={"right"}
+                    fontFamily={"Galano Grotesque"}
+                    fontSize={"14px"}
+                    fontStyle={"normal"}
+                    fontWeight={"400"}
+                    lineHeight={"20px"}
+                  >
+                    Processing
+                  </Text>
+                </Flex>
+              )}
+            </Flex>
+            <Flex
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"flex-start"}
+              gap={"-1px"}
+              flex={"1 0 0"}
+              w={"150.67px"}
+              h={"20px"}
+            >
+              <Text
+                color={"#1A181E"}
+                textAlign={"right"}
+                fontFamily={"Galano Grotesque"}
+                fontSize={"14px"}
+                fontStyle={"normal"}
+                fontWeight={"400"}
+                lineHeight={"20px"}
+              >
+                131634495747
+              </Text>
+            </Flex>
+            <Flex
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"flex-end"}
+              gap={"-1px"}
+              flex={"1 0 0"}
+              w={"150.67px"}
+              h={"20px"}
+            >
+              <Text
+                color={"#4D4D4D"}
+                textAlign={"right"}
+                fontFamily={"Galano Grotesque"}
+                fontSize={"14px"}
+                fontStyle={"normal"}
+                fontWeight={"500"}
+                lineHeight={"20px"}
+              >
+                ₹10,125.00
+              </Text>
+            </Flex>
+            <Flex
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"flex-end"}
+              gap={"-1px"}
+              flex={"1 0 0"}
+              w={"150.67px"}
+              h={"20px"}
+            >
+              <Text
+                color={"#4D4D4D"}
+                textAlign={"right"}
+                fontFamily={"Galano Grotesque"}
+                fontSize={"14px"}
+                fontStyle={"normal"}
+                fontWeight={"500"}
+                lineHeight={"20px"}
+              >
+                ₹1,125.00
+              </Text>
+            </Flex>
+            <Flex
+              direction={"column"}
+              justifyContent={"center"}
+              alignItems={"flex-end"}
+              gap={"-1px"}
+              flex={"1 0 0"}
+              w={"150.67px"}
+              h={"20px"}
+            >
+              <Text
+                color={"#4D4D4D"}
+                textAlign={"right"}
+                fontFamily={"Galano Grotesque"}
+                fontSize={"14px"}
+                fontStyle={"normal"}
+                fontWeight={"500"}
+                lineHeight={"20px"}
+              >
+                ₹9,312
+              </Text>
+            </Flex>
+          </Flex>
+        ))}
       </Flex>
     </Flex>
   );

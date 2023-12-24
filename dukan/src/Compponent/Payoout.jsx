@@ -7,7 +7,7 @@ import Transactios from './Transactios';
 const Payoout = () => {
   return (
     
-      <Box w="100%" h="90vh" p="25px" bg="#FAFAFA" overflow="auto" >
+      <Box w="1152px" h="794px" p="25px" bg="#FAFAFA" >
         <Flex flexDirection="column" alignItems="flex-start" gap="32px">
           <Flex
             flexDirection="column"

@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Select, Text } from "@chakra-ui/react";
+import { Flex,Text } from "@chakra-ui/react";
 
 const Next_payout = () => {
   return (
@@ -20,7 +20,7 @@ const Next_payout = () => {
             alignItems="flex-start"
             gap="16px"
             alignSelf="stretch"
-            // bg={"red"}
+           
           >
             <Flex alignItems="center" gap="8px">
               <Text
