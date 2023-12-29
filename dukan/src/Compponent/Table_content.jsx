@@ -16,11 +16,11 @@ import {
 import React from "react";
 
 export function TableContent() {
-  const arr = new Array(6).fill(0);
+  const arr = new Array(7).fill(0);
 
   return (
     <Flex
-      w={"1152px"}
+      w="100%"
       h={"448px"}
       p="12px 12px 8px 12px"
       flexDirection="column"
@@ -28,8 +28,14 @@ export function TableContent() {
       borderRadius="8px"
       bg="#fff"
       boxShadow="0px 2px 6px 0px rgba(26, 24, 30, 0.04)"
+     
     >
-      <Flex flexDirection="column" alignItems="flex-start" gap="12px">
+      <Flex
+        flexDirection="column"
+        alignItems="flex-start"
+        gap="12px"
+        w={"100%"}
+      >
         <Flex
           justifyContent="space-between"
           gap="670px"
@@ -61,7 +67,6 @@ export function TableContent() {
             <Input
               w="248px"
               border="1px solid #d9d9d9"
-             
               borderRadius="4px"
               type="text"
             />
@@ -142,14 +147,14 @@ export function TableContent() {
           </Flex>
         </Flex>
 
-        
         <Flex
-          w={"1128px"}
+          w="100%"
           padding={"10px 12px 10px 12px"}
           alignItems={"center"}
           gap={"40px"}
           borderRadius={"4px"}
           bg={"#F2F2F2"}
+          boxShadow={"0px 2px 6px 0px rgba(26, 24, 30, 0.04)"}
         >
           <Flex
             direction={"column"}
@@ -256,12 +261,13 @@ export function TableContent() {
         </Flex>
         {arr.map((e, ind) => (
           <Flex
-            w={"1128px"}
+            w="100%"
             padding={"10px 12px 10px 12px"}
             alignItems={"center"}
             gap={"40px"}
             borderRadius={"4px"}
             bg={"#FFF"}
+            boxShadow={"0px 2px 6px 0px rgba(26, 24, 30, 0.04)"}
           >
             <Flex
               direction={"column"}
@@ -269,7 +275,7 @@ export function TableContent() {
               alignItems={"flex-start"}
               gap={"-1px"}
               flex={"1 0 0"}
-              w={"150.67px"}
+              w="13.36%"
               h={"20px"}
             ></Flex>
             <Flex
@@ -350,7 +356,7 @@ export function TableContent() {
                 fontWeight={"400"}
                 lineHeight={"20px"}
               >
-                131634495747
+                {131634495747 + ind * 3}
               </Text>
             </Flex>
             <Flex
@@ -371,7 +377,11 @@ export function TableContent() {
                 fontWeight={"500"}
                 lineHeight={"20px"}
               >
-                ₹10,125.00
+                ₹
+                {(10125 + ind * 2).toLocaleString("en-Us", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </Text>
             </Flex>
             <Flex
@@ -392,7 +402,11 @@ export function TableContent() {
                 fontWeight={"500"}
                 lineHeight={"20px"}
               >
-                ₹1,125.00
+                ₹
+                {(1125 + ind * 2).toLocaleString("en-Us", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </Text>
             </Flex>
             <Flex
@@ -413,7 +427,11 @@ export function TableContent() {
                 fontWeight={"500"}
                 lineHeight={"20px"}
               >
-                ₹9,312
+                ₹
+                {(9312+ ind * 3).toLocaleString("en-Us", {
+                  minimumFractionDigits: 2,
+                  maximumFractionDigits: 2,
+                })}
               </Text>
             </Flex>
           </Flex>

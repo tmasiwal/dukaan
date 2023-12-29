@@ -1,33 +1,43 @@
 import {
-  Box,Flex,Input,InputGroup,InputLeftElement,
+  Box,
+  Flex,
+  Input,
+  InputGroup,
+  InputLeftElement,
+  Text
 } from "@chakra-ui/react";
 
 export function Navbar() {
   return (
     <Flex
-      w="1216px"
-      h="64px"
+      w="100%"
+      h="6.941%"
       p="12px 32px 12px 32px"
       alignItems="center"
       gap="16px"
       borderBottom="1px solid #D9D9D9"
       bg="#fff"
-     
-     
+      
     >
-      <Flex w="360px" alignItems="center" gap="16px" flex="1 0 0">
-
+      <Flex
+        w="29.60%"
+        justifyContent={"center"}
+        alignItems="center"
+        gap="16px"
+        flex="1 0 0"
+       
+      >
         <Flex
-        w={"360px"}
-        h={"28px"}
-        display={"flex"}
+          w={"26.11%"}
+          h="43.75%"
           alignItems="center"
-          gap="16px"
+          gap="6px"
           fontSize="12px"
           fontStyle="normal"
           fontWeight="400"
           lineHeight="16px"
-         fontFamily= "Galano Grotesque"
+          fontFamily="Galano Grotesque"
+         
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,16 +72,16 @@ export function Navbar() {
               </clipPath>
             </defs>
           </svg>
-          How it works
+          <Text fontFamily={"Galano Grotesque"}
+          fontSize={"12px"}
+          fontStyle={"normal"}
+          fontWeight={"400"}
+          lineHeight={"16px"}
+          >How it works</Text>
         </Flex>
       </Flex>
 
-      <Flex width="400px"
-      
-      padding={"9px 16px "}
-      gap={"8px"}
-
->
+      <Flex width="32.894%" padding={"9px 16px "} gap={"8px"}>
         <InputGroup>
           <InputLeftElement>
             <svg
@@ -95,7 +105,7 @@ export function Navbar() {
             </svg>
           </InputLeftElement>
           <Input
-            w="400px"
+            w="100%"
             borderRadius="6px"
             bg="#F2F2F2"
             type="text"
@@ -105,7 +115,7 @@ export function Navbar() {
       </Flex>
 
       <Flex
-        w="360px"
+        w="29.60%"
         justifyContent="flex-end"
         alignItems="flex-start"
         gap="8px"

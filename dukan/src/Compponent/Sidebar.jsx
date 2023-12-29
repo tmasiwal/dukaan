@@ -4,7 +4,7 @@ import company_logo from "../assets/image/company_logo.png";
 export function Sidebar() {
   return (
     <Flex
-      w="224px"
+      w={"15.56%"}
       p="16px 10px"
       flexDirection="column"
       alignItems="center"
@@ -19,7 +19,7 @@ export function Sidebar() {
         gap={"24px"}
         flex={"1 0 0"}
       >
-        <Flex w="192px" h={"42px"} alignItems="center" gap="12px">
+        <Flex  h={"42px"} alignItems="center" gap="12px">
           <Box
             w="39px"
             h="39px"
