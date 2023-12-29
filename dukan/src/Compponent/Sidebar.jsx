@@ -11,7 +11,7 @@ export function Sidebar() {
       gap="16px"
       flex="1 1 0"
       bg="#1E2640"
-      h="922px"
+      h="100%"
     >
       <Flex
         flexDirection={"column"}
@@ -19,7 +19,7 @@ export function Sidebar() {
         gap={"24px"}
         flex={"1 0 0"}
       >
-        <Flex  h={"42px"} alignItems="center" gap="12px">
+        <Flex width={"85.71%"} h={"42px"} alignItems="center" gap="12px">
           <Box
             w="39px"
             h="39px"
@@ -577,7 +577,6 @@ export function Sidebar() {
       <Flex
         w="192px"
         p="6px 12px"
-      
         alignItems="flex-start"
         gap="10px"
         borderRadius="4px"

@@ -11,7 +11,7 @@ export function Navbar() {
   return (
     <Flex
       w="100%"
-      h="6.941%"
+      h="64px"
       p="12px 32px 12px 32px"
       alignItems="center"
       gap="16px"
@@ -29,7 +29,7 @@ export function Navbar() {
       >
         <Flex
           w={"26.11%"}
-          h="43.75%"
+          h="28px"
           alignItems="center"
           gap="6px"
           fontSize="12px"

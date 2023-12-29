@@ -9,9 +9,9 @@ function App() {
 
   return (
     <>
-      <Flex w="100%" justifyContent="space-between">
+      <Flex w="100%" justifyContent="space-between" h={"100vh"}>
         <Sidebar />
-        <Box w="calc(100% - 224px)">
+        <Box w="calc(100% - 224px)" overflow={"auto"}>
           <Navbar />
           <Payoout />
         </Box>

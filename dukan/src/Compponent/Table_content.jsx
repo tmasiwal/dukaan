@@ -16,7 +16,7 @@ import {
 import React from "react";
 
 export function TableContent() {
-  const arr = new Array(7).fill(0);
+  const arr = new Array(6).fill(0);
 
   return (
     <Flex
